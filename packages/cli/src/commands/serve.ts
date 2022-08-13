@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { serve } from '@code-play/local-api/dist';
+import { serve } from '@code-play-rp/local-api';
 import path = require('path');
 
 const isProduction = process.env.NODE_ENV === 'production';
