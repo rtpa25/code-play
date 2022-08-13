@@ -1,0 +1,26 @@
+{
+  "name": "code-play",
+  "version": "1.0.0",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@code-play/local-client": "^1.0.0"
+  },
+  "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
+  },
+  "devDependencies": {
+    "@code-play/local-api": "^1.0.0",
+    "commander": "^9.4.0",
+    "@types/node": "^18.7.2",
+    "esbuild": "0.8.26",
+    "typescript": "^4.7.4"
+  }
+}

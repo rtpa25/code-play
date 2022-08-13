@@ -1,0 +1,22 @@
+{
+  // Change this to match your project
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    // Tells TypeScript to read JS files, as
+    // normally they are ignored as source files
+    "allowJs": true,
+    // Generate d.ts files
+    "declaration": true,
+    // This compiler run should
+    // only output d.ts files
+    "emitDeclarationOnly": false,
+    // Types should go into this directory.
+    // Removing this would place the .d.ts files
+    // next to the .js files
+    "outDir": "dist",
+    //we import es6 modules as they are, but CommonJS modules are wrapped into an object with the default key. This makes it possible to import defaults on CommonJS modules.
+    "esModuleInterop": true,
+    //Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+    "allowSyntheticDefaultImports": true,    
+  }
+}
